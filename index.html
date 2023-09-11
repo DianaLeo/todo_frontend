@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Todo List</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <small>Case insensitive, fuzze search supported.</small><br>
+    <small>Click the blank space of the list to change its status.</small>
+    <h1>TODO</h1>
+    <div class="operationBar">
+      <button id="newTodo">New todo</button>
+      <form id="searchForm" action="">
+        <input type="text" id="search" class="input shadow" placeholder="Search a todo title" title="Case insensitive, fuzze search supported" required>
+        <input type="submit" id="searchBtn" value="Search">
+      </form>
+    </div>
+
+    <form action="" id="newTodoForm" class="shadow">
+      <input type="text" id="title" class="input" placeholder="title" required>
+      <input type="text" id="description" class="input" placeholder="description">
+      <input type="submit" id="confirm" value="Confirm">
+    </form>
+    <ul class="todoList">
+    </ul>
+
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

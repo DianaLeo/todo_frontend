@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: rgb(179, 131, 226);
+  font-size: 7rem;
+  text-align: center;
+  opacity: 0.4;
+}
+
+button,
+input[type=submit] {
+  border: none;
+  font-size: 1rem;
+  line-height: 1rem;
+  cursor: pointer;
+}
+#newTodo,#searchBtn,#confirm{
+    border: 5px solid rgba(179, 131, 226, 0.4);
+}
+#newTodo:hover,
+#searchBtn:hover,
+#confirm:hover {
+  background-color: rgba(179, 131, 226, 0.4);
+  border: none;
+}
+
+button,
+#searchBtn, .save {
+  border-radius: 10px;
+  line-height: 2rem;
+}
+
+.edit, .delete, .save {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin-left: 0.5rem;
+  background-color: rgba(179, 131, 226, 0.4);
+}
+.delete{
+  background-color:coral;
+}
+
+#newTodo{
+  width: 7rem;
+  height: 3.5rem;
+}
+
+#searchBtn {
+  width: 6rem;
+  height: 3.5rem;
+}
+
+#confirm {
+  padding: 1rem 2rem;
+  width: 100%;
+  text-align: left;
+}
+
+.operationBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* max-width: 100%;
+  width: 400px; */
+}
+
+#searchForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+#newTodoForm {
+  margin-bottom: 50px;
+  display: none;
+}
+
+#newTodoForm.show,.save.show,.edit.show {
+  display: block;
+}
+
+.input[type=text] {
+  border: none;
+  color: #444;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  display: block;
+  height: 3.5rem;
+}
+#newTodoForm input{
+  width: 100%;
+}
+
+.input::placeholder {
+  color: #d5d5d5;
+}
+
+.input:focus {
+  outline-color: rgb(179, 131, 226);
+}
+
+.todoList {
+  background-color: #fff;
+  margin-bottom: 50px;
+  list-style-type: none;
+}
+
+.todoList li {
+  border-top: 1px solid #e5e5e5;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.todoList li div{
+  display: flex;
+}
+.todoList li #date{
+  width: 4rem;
+  align-items: center;
+}
+.todoList li form input[type=text]{
+  border: none;
+  background-color: transparent;
+}
+.todoList li form .save{
+  position: absolute;
+  right: 5rem;
+  top:50%;
+  translate: 0 -50%;
+}
+.save,.edit{
+  display: none;
+}
+
+.todoList li form .listTitle{
+  font-size: 1.5rem;
+}
+
+.todoList li form .listTitle.completed {
+  color: #b6b6b6;
+  text-decoration: line-through;
+}
+
+small {
+  margin-top: 3rem;
+  text-align: center;
+}
+small, .listDescription{
+  color: #b5b5b5;
+}
