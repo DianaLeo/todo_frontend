@@ -9,7 +9,8 @@ const newDescription = document.getElementById('description');
 
 const ids = [];
 const completeds = [];
-const baseUrl = 'http://localhost:8000/api/tasks';
+//const baseUrl = 'http://localhost:8000/api/tasks';
+const baseUrl = 'http://ec2-13-55-238-167.ap-southeast-2.compute.amazonaws.com:8000/api/tasks';
 getTodoList(baseUrl);
 
 searchForm.addEventListener('submit', (event) => {
